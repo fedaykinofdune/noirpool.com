@@ -1,0 +1,70 @@
+
+
+
+<style>
+
+    #topCharts{
+        padding: 18px;
+    }
+
+    #topCharts > div > div > svg{
+        display: block;
+        height: 280px;
+    }
+
+    .chartWrapper{
+        border: solid 1px #c7c7c7;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 18px;
+    }
+
+    .chartLabel{
+        font-size: 1.2em;
+        text-align: center;
+        padding: 4px;
+    }
+
+    .chartHolder{
+
+    }
+
+</style>
+
+<section class="content">
+		<div class="container centered">
+			<div class="row m-t">
+				<div class="col-1 r-color r-shadow pad-col-in">
+
+
+					<div id="topCharts">
+
+					    <div class="chartWrapper">
+					        <div class="chartLabel">Workers Per Pool</div>
+					        <div class="chartHolder"><svg id="poolWorkers"/></div>
+					    </div>
+
+					    <div class="chartWrapper">
+					        <div class="chartLabel">Hashrate Per Pool</div>
+					        <div class="chartHolder"><svg id="poolHashrate"/></div>
+					    </div>
+
+					    <div class="chartWrapper">
+					        <div class="chartLabel">Blocks Pending Per Pool</div>
+					        <div class="chartHolder"><svg id="poolBlocks"/></div>
+					    </div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.5/d3.min.js"></script>
+<script src="./static/nvd3.js"></script>
+<script>
+    document.querySelector('main').appendChild(document.createElement('script')).src = '/static/stats.js';
+</script>

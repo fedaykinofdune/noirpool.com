@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="shortcut icon" href="/static/favicon.ico">
+
+	    <link href="static/css/bootstrap.css" rel="stylesheet">
+	    <link href="static/css/main.css" rel="stylesheet">
+		<link href="static/css/animations.css" rel="stylesheet">
+		<link href="static/css/nvd3.css" rel="stylesheet" >
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+		<script src="static/js/bootstrap.js"></script>
+		<script src="static/js/functions.js"></script>
+		<script src="static/js/main.js"></script>
+
+		<title>NoirPool</title>
+		<style type="text/css">
+.auto-style1 {
+	font-size: xx-large;
+}
+.auto-style2 {
+	color: #c09b15;
+	position: relative;
+	font-size: large;
+}
+		.auto-style3 {
+			width: 96px;
+			margin-bottom: 0px;
+		}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<section data-type="background" class="noir-header ">
+			      <div class="container">
+			        <div class="row">
+				        <a href="/">
+					        <center>
+						        <img  src="/static/img/header11.png"/>
+						        <h3 class="auto-style1"><strong></strong></h3>
+						        <small class="auto-style2"><strong></strong></small>
+					        </center>
+				        </a>       
+			        </div>
+			      </div>
+			</section>
+		</header>
+
+		<section class="nav white r-shadow sticky">
+			<nav>
+				<center>
+					<div class="sticky-logo">
+						<img class="" src="static/img/logo-bl-xs.svg" />
+					</div>
+				</center>
+				<ul>
+					
+					<li><a href="https://bitcointalk.org/index.php?topic=565623">NoirShares Release</a></li>
+					<li><a href="http://noirds.com">Noirds.com</a></li>
+					<li><a href="/">Getting Started</a></li>
+					<li><a href="/minerinfo">Miner Stats</a></li>
+					<li><a href="/stats">Graph Stats</a></li>
+					<li><a href="/tbs">Block Stats</a></li>
+					<li><a href="/api">API</a></li>
+				</ul>
+			</nav>
+		</section>
+
+
+		<main>
+	    	{{=it.page}}
+		</main>
+
+		<footer>
+
+			<div class="container  m-t">
+				<div class="row m-t r-pad r-color r-shadow centered">
+					<h4 class="centered">Stats overview</h4>
+
+					{{ for(var pool in it.stats.pools) { }}
+
+					<div class="col-lg-2 col-sm-6 col-xs-12 centered coinstat">
+						<h5>{{=pool}}</h5>
+						<ul>
+							<li><i class="fa fa-users"></i><strong> {{=it.stats.pools[pool].workerCount}} Miners </strong></li>
+							<li><i class="fa fa-tachometer"></i><strong> {{=it.stats.pools[pool].hashrateString}} </strong></li>
+						</ul>
+					</div>
+
+					{{ } }}
+
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-1 top bottom">
+						<center><!-- 
+							<div>
+							    This site is powered by the open source&nbsp;<a target="_blank" href="https://github.com/zone117x/node-open-mining-portal/">NOMP</a>&nbsp;
+							    project created by Matthew Little and licensed under the&nbsp;<a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a>
+							</div>
+							<div>
+							    <i class="fa fa-heart"></i>&nbsp; Support this project by donating&nbsp;<i class="fa fa-btc"></i>&nbsp;BTC: 1KRotMnQpxu3sePQnsVLRy3EraRFYfJQFR
+							</div>
+							<div id="communityFooter">
+							    Community&nbsp;<i class="fa fa-comment"></i>&nbsp;: &nbsp;<a target="_blank" href="https://kiwiirc.com/client/irc.freenode.net/nomp">#nomp IRC</a>
+							    &nbsp;&nbsp;|&nbsp;&nbsp;
+							    <a target="_blank" href="http://reddit.com/r/nomp">/r/nomp</a>
+							    &nbsp;&nbsp;|&nbsp;&nbsp;
+							    <iframe src="http://ghbtns.com/github-btn.html?user=zone117x&repo=node-open-mining-portal&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="140" height="20"></iframe>
+							</div>
+						</center> -->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</html>

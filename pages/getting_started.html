@@ -1,0 +1,205 @@
+
+	
+	<div class="container">
+		<div class="row m-t">
+			<a class="a-get-started" data-toggle="modal" data-target="#getstarted-scrypt"  href="#" > 
+				<div class="col-lg-4 col-sm-6 col-xs-12 centered">
+					<div class="pad-col-in r-color r-shadow ">
+						<h4>Scrypt MultiPort</h4><small>Get Started</small><br>
+						<img src="static/img/coins/ico-scrypt.png" />
+					</div>
+				</div>
+			</a>
+
+			<a class="a-get-started" data-toggle="modal" data-target="#getstarted-info"  href="#" > 
+				<div class="col-lg-4 col-sm-6 col-xs-12 centered">
+					<div class="pad-col-in r-color r-shadow ">
+						<h4>About NoirPool</h4><small>About Us</small><br>
+						<img src="static/img/coins/ico-scrypt.png" />
+					</div>
+				</div>
+			</a>
+			<a class="a-get-started" data-toggle="modal" data-target="#getstarted-sha256"  href="#" > 
+				<div class="col-lg-4 col-sm-6 col-xs-12 centered">
+					<div class="pad-col-in r-color r-shadow ">
+						<h4>Sha256 MultiPort</h4><small>Get Started</small><br>
+						<img src="static/img/coins/ico-sha.png" />
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+
+	<div class="content pools">
+		<div class="container">
+			<div class="row m-t">
+
+				{{ for(var pool in it.stats.pools) { }}
+
+				<!--Modal Link Auroracoin-->
+				<a class="a-get-started" data-toggle="modal" data-target="#getstarted-{{=it.stats.pools[pool].name}}"  href="#" > 
+					<div class="col-lg-2 col-sm-4 col-xs-6 centered">
+						<div class="pad-col-in r-color r-shadow ">
+							<h4>{{=it.stats.pools[pool].name}}</h4>
+							<small>Get Started</small>
+							<img src="static/img/coins/ico-{{=it.stats.pools[pool].name}}.png" />
+							<h5>{{=it.stats.pools[pool].algorithm}}</h5>
+						</div>
+					</div>
+				</a>
+
+				{{ } }}
+
+			</div>
+		</div>
+	</div>
+
+
+<!-- Modals  -->
+
+
+<div class="modal fade" id="getstarted-info" tabindex="-1" role="dialog" aria-labelledby="Get Started - Info" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h4 class="modal-title" id="myModalLabel">About NoirPool</h4>
+       		
+      		</div>
+
+			<div class="modal-body"><font color="white">
+Noirpool –  the most profitable and flexible method of mining Noirshares. <br /><br />
+
+Want to earn the most Noirshares (NRS) for your hashrate? Want to use ASIC hardware and still receive payouts in NRS? Want to take advantage of the highest performance multi-pool switching algorithms? Tired of clone coins and ready for something better? Join Noirpool and let a dedicated team of developers help grow your investment. <br /><br />
+
+Announcing Noirpool; the most profitable way to earn Noirshares (NRS). Noirpool supports both Scrypt and SHA-256 mining – allowing ASICs to participate in one of the most advanced and profitable alternative currency markets available. How is Noirpool more profitable than direct mining? Profit-switching: Noirpool uses custom-scripted algorithms which mine only the most profitable alternative currencies. The resulting coins, which do not have the long-term portfolio potential of Noirshares, are traded for NRS on a variety of exchanges at irregular intervals – ensuring steady buy support for NRS as well as paying out larger shares to miners compared to mining NRS alone. <br /><br />
+
+In addition to advanced multi-port profit switching, Noirpool uses dedicated DDOS-protected servers, a custom-optimized backend, supports both GPU and ASIC mining, and pays out directly in Noirshares - one of the fastest growing and technologically advanced cryptocurrencies available.<br /><br />
+
+Got Questions? Comments? Concerns? Just want to talk?<br /><br />
+
+Join us in IRC. <a href="http://irc.freenode.net#noirgroup">irc.freenode.net#noirgroup</a> <br />
+Twitter: <a href="http://www.twitter.com/noirds">@Noirds</a ><br />
+Reddit: <a href="http://www.reddit.com/r/noirshares">www.reddit.com/r/noirshares</a> <br /><br />
+
+NoirPool is brought to you by Noir Group. Noir Group welcomes everyone to join us as we learn, play, build, and work towards a better future.<br /><br /></font>
+
+			</div>
+
+	      	<div class="modal-footer">
+<a href="http://www.noirds.com">www.noirds.com</a>
+	      	</div>
+    	</div>
+  	</div>
+</div>
+
+
+<div class="modal fade" id="getstarted-scrypt" tabindex="-1" role="dialog" aria-labelledby="Get Started - Scrypt" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h4 class="modal-title" id="myModalLabel">Scrypt Multiport | Pool Configuration</h4>
+       		
+      		</div>
+
+	      	<div class="modal-body">
+	        	<div id="coinInfoRows">
+	        		<div id="coinInfoRowKeys">
+		        		<div class="">Username:</div>
+		        		<div>Password:</div>
+		        		<div class="coinInfoData bold-color">Algorithm:</div>
+		        		<div class="coinInfoData bold-color">Stratum URL<span class="coinInfoSubtle"></span>:</div>
+	        		</div>
+		        	<div id="coinInfoRowValues">
+		        		<div id="coinInfoUsername">NoirShares Address</div>
+		        		<div>Anything</div>
+		        		<div class="coinInfoData">scrypt</div>
+		        		<div class="coinInfoData">stratum+tcp://www.noirpool.com:4444</div>
+		        	</div>
+	        	</div>
+	      	</div>
+
+	      	<div class="modal-footer">
+	      	</div>
+    	</div>
+  	</div>
+</div>
+
+<div class="modal fade" id="getstarted-sha256" tabindex="-1" role="dialog" aria-labelledby="Get Started - Sha256" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h4 class="modal-title" id="myModalLabel">Sha256 Multiport | Pool Configuration</h4>
+       		
+      		</div>
+
+	      	<div class="modal-body">
+	        	<div id="coinInfoRows">
+	        		<div id="coinInfoRowKeys">
+		        		<div class="">Username:</div>
+		        		<div>Password:</div>
+		        		<div class="coinInfoData bold-color">Algorithm:</div>
+		        		<div class="coinInfoData bold-color">Stratum URL<span class="coinInfoSubtle"></span>:</div>
+	        		</div>
+		        	<div id="coinInfoRowValues">
+		        		<div id="coinInfoUsername">NoirShares Address</div>
+		        		<div>Anything</div>
+		        		<div class="coinInfoData">sha256</div>
+		        		<div class="coinInfoData">stratum+tcp://www.noirpool.com:4445</div>
+		        	</div>
+	        	</div>
+	      	</div>
+
+	      	<div class="modal-footer">
+	      	</div>
+    	</div>
+  	</div>
+</div>
+
+{{ for(var pool in it.poolsConfigs) { }}
+
+<div class="modal fade" id="getstarted-{{=it.poolsConfigs[pool].coin.name}}" tabindex="-1" role="dialog" aria-labelledby="Get Started - {{=it.poolsConfigs[pool].coin.name}}" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h4 class="modal-title" id="myModalLabel">{{=it.poolsConfigs[pool].coin.name}} | Pool Configuration</h4>
+       		
+      		</div>
+
+	      	<div class="modal-body">
+	        	<div id="coinInfoRows">
+	        		<div id="coinInfoRowKeys">
+		        		<div class="">Username:</div>
+		        		<div>Password:</div>
+		        		<div class="coinInfoData bold-color">Algorithm:</div>
+		        		<div class="coinInfoData bold-color">Stratum URL<span class="coinInfoSubtle"></span>:</div>
+	        		</div>
+		        	<div id="coinInfoRowValues">
+		        		<div id="coinInfoUsername">NoirShares Address</div>
+		        		<div>Anything</div>
+		        		<div class="coinInfoData">{{=it.poolsConfigs[pool].coin.algorithm}}</div>
+
+		        		{{ for(var port in it.poolsConfigs[pool].ports) { }}
+		        		<div class="coinInfoData">stratum+tcp://{{=it.portalConfig.website.stratumHost}}:{{=port}}</div>
+		        		{{ } }}
+
+		        	</div>
+	        	</div>
+	      	</div>
+
+	      	<div class="modal-footer">
+	      	</div>
+    	</div>
+  	</div>
+</div>
+
+{{ } }}

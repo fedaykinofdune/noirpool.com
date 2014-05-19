@@ -1,0 +1,34 @@
+	<div class="container centered">
+		<div class="row m-t">
+			<div class="col-1 r-color r-shadow pad-col-in">
+				<div class="table-responsive">
+					<table class="pure-table table table-condensed">
+					    <thead>
+						    <tr>
+						        <th><center><h4>Rank</h4></center></th>
+						        <th><center><h4>NRS Address</h4></center></th>
+						        <th><center><h4>Total Balance</h4></center></th>
+						        <th><center><h4>Pending Balance</h4></center></th>
+						        <th><center><h4>Paid Balance</h4></center></th>
+						    </tr>
+					    </thead>
+
+
+					    {{ for(var rank in it.userBalances) { }}
+
+						    <tr class="pure-table-odd">
+						        <td><h6>{{=parseInt(rank)}}</h6></td>
+						        <td><h6>{{=it.userBalances[rank].address}}</h6></td>
+						        <td><h7>{{=(it.userBalances[rank].total.toFixed(8))}}</h7></td>
+						        <td><h7>{{=it.userBalances[rank].pending.toFixed(8)}}</h7></td>
+						        <td><h7>{{=it.userBalances[rank].paid.toFixed(8)}}</h7></td>
+						    </tr>
+
+					    {{ } }}
+
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>

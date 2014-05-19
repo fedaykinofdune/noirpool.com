@@ -1,0 +1,396 @@
+﻿/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: NewFirm - Business Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://alvarez.is
+ */
+ 
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+
+/* OVERALL ASPECT */
+
+html {
+	background: #262624;
+}
+
+
+body {
+  
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    color: #555;
+    width: 100%;
+    background: #262624;
+
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #333;
+}
+
+h7 {
+	color: #ffffff;        
+	display: block;
+}
+
+h6 {
+	color: #c09b15;
+}
+
+h4 {
+	color: #c09b15;
+}
+
+
+h3 {
+	color: #fff;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.top {
+	margin-top: 48px;
+}
+
+.bottom {
+	margin-bottom: 24px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.goleft {
+	text-align: left;
+}
+
+/* Links */
+a {
+    word-wrap: break-word;
+	color: #c09b15;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #000;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center;
+}
+
+.m-t {
+	margin-top: 24px;
+}
+
+
+.noir-header {
+	background: #FFF url('../img/header12.jpg') no-repeat center bottom;
+	background-size: cover;
+	padding: 12px 0;
+	min-height: 200px;
+}
+
+
+
+.border {
+	border: 0px solid #333;
+}
+
+.claim {
+	color: #c09b15;
+	position: relative;
+}
+
+.r-pad {
+	padding: 20px;
+}
+
+.r-color {
+	background: #272525;
+}
+
+.r-shadow {
+	border-bottom: 1px solid #c09b15;
+	-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.52);
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.52);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.52);
+	
+}
+
+
+
+
+.col-lg-3-m12 {
+}
+
+.pad-col-in {
+	padding: 12px;
+	
+}
+
+.pad-col-in img {
+	opacity: 0.2;
+}
+
+.pad-col-in img:hover {
+	opacity: 0.8;
+}
+
+
+
+.btn-noir {
+	background: linear-gradient(to bottom, #554408 0%, #c09a15 100%) #c09b15;
+	color: #000;
+
+	text-shadow: 1px 1px 1px #272723;
+	
+}
+
+.btn-noir:hover {
+	background: linear-gradient(to bottom, #353228 0%, #554408 99.8%) #c09b15;
+	color: #fff;
+
+	text-shadow: 1px 1px 1px #272723;
+}
+
+
+.a-get-started {
+	cursor: pointer;
+
+}
+
+.white {
+	background: #FFF;
+	margin: 0 auto;
+	text-align: center;
+	padding: 4px 0;
+}
+
+
+.opac {
+	opacity: 0.8;
+}
+
+.logo {
+	width: 96px;
+}
+
+.sticky-logo {
+	border: 0px solid red;
+	display: none;
+	width: 24px;
+	text-align: left;
+	margin:  0 0 12px 0;
+}
+
+.sticky-logo img {
+	width: 48px;
+	height: 48px;
+	float: left;
+	margin: 6px 0 0 -48px;
+}
+
+.nav {
+	 clear: both;
+	 text-align: center;
+	 z-index: 999;
+}
+
+nav {
+}
+
+nav ul {
+	list-style: none;
+	max-width: 960px; /* for  below IE7 use `width: 660px;` */
+	margin: 0 auto;
+	display: inline-block;
+	padding: 0;
+}
+
+
+nav ul li{
+	float: left;
+	padding:  12px 8px;
+
+}
+
+nav ul li a{
+	font-weight: 100;
+	font-size: 14px;
+}
+
+
+
+nav ul li:last-child {
+	margin-right: 0px;
+}
+
+
+/* Modal get start coins */
+
+
+.modal {
+}
+
+.modal-header, .modal-footer {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+
+.modal-header {
+	min-height: 16.42857143px;
+	padding: 15px;
+	border-bottom: 1px solid #c09b15;
+}
+
+.modal-header .close {
+	margin-top: -2px;
+}
+
+.modal-title {
+	margin: 0;
+ 	line-height: 1.42857143;
+}
+
+.modal-body {
+	position: relative;
+	padding: 20px;
+}
+
+.modal-footer {
+	padding: 19px 20px 20px;
+	margin-top: 15px;
+	text-align: right;
+	border-top: 1px solid #c09b15;
+}
+
+.modal-dialog {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+#coinInfoRows {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 20px 0 20px 0;
+  
+}
+
+#coinInfoRows > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#coinInfoRows > div > div {
+  padding-top: 3px;
+  padding-right: 12px;
+  padding-bottom: 3px;
+  padding-left: 12px;
+ 
+}
+
+#coinInfoRowKeys > div {
+	color: #c09b15;
+	font-weight: 500;
+}
+
+#coinInfoRowValues {
+	 color: #FFF;
+}
+
+
+
+.coinstat {
+	
+}
+
+.coinstat h5 {
+	color: #c09b15;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #333;
+	opacity: 0.6;
+}
+
+.coinstat ul {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.coinstat ul li {
+	padding: 4px 2px;
+}
+
+.coinstat ul li:first-child {
+	border-bottom: 1px dotted #333;
+}
+
+.coinstat ul li:last-child {
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+
+.col-xs-12 {
+	text-align: ;
+}
+
+
+}
+
+
+

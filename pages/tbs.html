@@ -1,0 +1,51 @@
+
+
+<section class="content">
+	<div class="container centered">
+		<div class="row m-t">
+			<div class="col-1 r-color r-shadow pad-col-in">
+				<div class="table-responsive">
+					<table class="pure-table table table-condensed">
+					    <thead>
+						    <tr>
+						        <th><center><h4>Pool</h4></center></th>
+						        <th><center><h4>Algo</h4></center></th>
+						        <th><center><h4>Workers</h4></center></th>
+						        <th><center><h4>Valid Shares</h4></center></th>
+						        <th><center><h4>Invalid Shares</h4></center></th>
+						        <th><center><h4>Total Blocks</h4></center></th>
+						        <th><center><h4>Pending</h4></center></th>
+						        <th><center><h4>Confirmed</h4></center></th>
+						        <th><center><h4>Orphaned</h4></center></th>
+						        <th><center><h4>Paid</h4></center></th>
+						        <th><center><h4>Hashrate</h4></center></th>
+						    </tr>
+					    </thead>
+
+
+					    {{ for(var pool in it.stats.pools) { }}
+
+						    <tr class="pure-table-odd">
+						        <td><h6>{{=it.stats.pools[pool].name}}</h6></td>
+						        <td><h7>{{=it.stats.pools[pool].algorithm}}</h7></td>
+						        <td><h7>{{=Object.keys(it.stats.pools[pool].workers).length}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].poolStats.validShares}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].poolStats.invalidShares}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].poolStats.validBlocks}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].blocks.pending}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].blocks.confirmed}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].blocks.orphaned}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].blocks.paidOut}}</h7></td>
+						        <td><h7>{{=it.stats.pools[pool].hashrateString}}</h7></td>
+						    </tr>
+
+					    {{ } }}
+
+
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
